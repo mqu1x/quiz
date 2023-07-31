@@ -8,9 +8,12 @@ body {
     animation: bgAnim 50s ease-in-out infinite;
     background-size: 500% 500%; /*интереснно*/
     display: flex;
+	flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
+	position: relative;
+    padding: 0 20px;
 }
 
 h2 {
@@ -39,17 +42,10 @@ h2 {
     position: relative;
     overflow: hidden;
 	padding: 2rem 2rem calc(2rem + 70px); /*!!!!!!!!*/
+	margin-bottom: 20px;
 }
 
-
-@media screen and (max-width: 500px) {
-    .quiz {
-        width: 80vw;
-		max-height: 90vh;
-    }
-}
-
-.title{
+.title {
 	font-size: 1.5rem;
 	padding: 1rem 0;
 	text-align: center;
@@ -193,10 +189,60 @@ h2 {
 	}
 }
 
-video {
-	width: 100%;
+
+.unCorrect {
+	width: 40vw;
+    max-height: 300px;
+    background-color: #fff;
+    border-radius: 20px;
+    position: relative;
+	padding: 2rem 2rem; /*!!!!!!!!*/
+    display: none;
+    overflow: hidden;
+}
+
+.unCorrect h1 {
+	font-size: 1.5rem;
+	padding: 1rem 0;
+	text-align: center;
+	margin: 0;
+	background-color: rgba(255, 100, 0, 0.75);
 	border-radius: 20px;
 }
 
+.UnHer {
+    padding: 10px;
+    border-radius: 20px;
+    overflow: scroll;
+    height: 60%;
+}
 
-/*выкладываь работы публично
+
+.vivo {
+    margin-bottom: 20px;
+    border-radius: 20px;
+    border: 1px dotted #4A00E0;
+    padding: 10px;
+}
+
+.no {
+    color: red;
+    
+}
+
+.yes {
+    color: green;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 500px) {
+    .quiz {
+        width: 80vw;
+		max-height: 90vh;
+    }
+
+    .unCorrect {
+        width: 80vw;
+    }
+}
+
